@@ -1,0 +1,3 @@
+E:/workspaces/gitcode/androidSourceCode/cmake-build-debug/CMakeFiles/androidSourceCode.dir
+E:/workspaces/gitcode/androidSourceCode/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/workspaces/gitcode/androidSourceCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir
