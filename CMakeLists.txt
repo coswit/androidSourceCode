@@ -4,6 +4,7 @@ project(androidSourceCode)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(bionic/libc/bionic)
+include_directories(bionic/libc/private)
 include_directories(dalvik/vm/native)
 include_directories(external/skia/include)
 include_directories(external/skia/include/core)
@@ -61,6 +62,7 @@ include_directories(frameworks/native/include/private/utils)
 include_directories(frameworks/native/include/ui)
 include_directories(frameworks/native/include/utils)
 include_directories(frameworks/native/libs/utils/tests)
+include_directories(frameworks/native/libs/binder)
 include_directories(frameworks/native/services/surfaceflinger)
 include_directories(frameworks/native/services/surfaceflinger/DisplayHardware)
 include_directories(libnativehelper/include)
@@ -72,6 +74,8 @@ include_directories(system/core/include)
 include_directories(frameworks/native/opengl/libagl)
 include_directories(frameworks/native/opengl/include)
 include_directories(bionic/libc/include)
+include_directories(bionic/libc/kernel/common)
+include_directories(bionic/libc/kernel/arch-arm)
 
 add_executable(androidSourceCode
         bionic/libc/bionic/__errno.c
@@ -1388,4 +1392,7 @@ add_executable(androidSourceCode
         system/core/include/cutils/compiler.h
         frameworks/native/opengl/libagl/egl.cpp
         frameworks/native/opengl/include/EGL/egl.h
-        bionic/libc/include/sys/mman.h)
+        bionic/libc/include/sys/mman.h
+        bionic/libc/kernel/arch-arm/asm/signal.h
+        system/core/include/system/graphics.h
+        bionic/libc/kernel/common/asm-generic/signal.h bionic/libc/private/bionic_atomic_inline.h)

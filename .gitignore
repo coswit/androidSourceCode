@@ -31,3 +31,4 @@ google-services.json
 
 # Android Profiling
 *.hprof
+cmake-build-debug/
